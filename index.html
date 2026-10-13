@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Mimetic Trap | E-book by Adegor Favour Ese | ₦1,500</title>
+<meta name="description" content="Why people who earn well still end the month with nothing, and how to stop it. A 46-page e-book on peer pressure, budgeting and building assets. ₦1,500.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3F5F1; --card:#FFFFFF; --ink:#10231C; --muted:#4C5C54; --line:#D4DCD5;
+  --green:#1D5C45; --deep:#0F3D2E; --mint:#DDE8DF; --brick:#B4472F; --gold:#F0B323; --goldink:#2B2000;
+  --needs:#8CA396; --onDeep:#F3F5F1;
+  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
+  --text:"Newsreader",Georgia,"Times New Roman",serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0C1612; --card:#13221B; --ink:#E9F0EA; --muted:#A5B6AB; --line:#27382F;
+    --green:#5FBF93; --deep:#0A2A20; --mint:#173126; --brick:#E0765C; --needs:#5F7A6B;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0C1612; --card:#13221B; --ink:#E9F0EA; --muted:#A5B6AB; --line:#27382F;
+  --green:#5FBF93; --deep:#0A2A20; --mint:#173126; --brick:#E0765C; --needs:#5F7A6B;
+}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--text);font-size:18px;line-height:1.62;-webkit-text-size-adjust:100%}
+img,svg{max-width:100%}
+a{color:var(--green)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0;letter-spacing:-.02em}
+h1{font-size:clamp(2.3rem,7.4vw,4.1rem);font-weight:800}
+h2{font-size:clamp(1.65rem,4.6vw,2.4rem);font-weight:700;margin-bottom:.6em}
+h3{font-size:1.15rem;font-weight:700;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;border:0;border-radius:10px;padding:15px 24px;cursor:pointer;line-height:1.1}
+.btn-gold{background:var(--gold);color:var(--goldink)}
+.btn-gold:hover{filter:brightness(.96)}
+.btn-ghost{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* top bar */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--paper) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:58px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.05rem;letter-spacing:-.01em;color:var(--ink);text-decoration:none}
+.bar .btn{padding:10px 16px;font-size:.95rem}
+
+/* hero */
+.hero{padding:44px 0 56px}
+.hero .grid{display:grid;gap:36px}
+.hero .lede{font-size:1.2rem;color:var(--muted);max-width:34em;margin-top:20px}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:26px}
+.price-note{font-family:var(--display);font-weight:500;color:var(--muted);font-size:.95rem}
+.cover-wrap{display:flex;justify-content:center}
+.cover{width:min(250px,64vw);aspect-ratio:148/210;background:var(--deep);color:var(--onDeep);border-radius:4px 10px 10px 4px;padding:22px 20px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:-6px 0 0 #082519 inset,0 22px 34px -12px rgba(0,0,0,.45);transform:rotate(-2.5deg)}
+.cover small{font-family:var(--display);font-weight:500;font-size:.62rem;letter-spacing:.02em;opacity:.8;line-height:1.3}
+.cover b{font-family:var(--display);font-weight:800;font-size:2.05rem;line-height:.95;letter-spacing:-.03em;display:block;margin:10px 0}
+.cover em{font-style:italic;font-size:.82rem;line-height:1.35;opacity:.9}
+.cover i{display:block;height:3px;width:44px;background:var(--gold);margin:12px 0}
+.cover .by{font-family:var(--display);font-weight:700;font-size:.8rem}
+
+/* same salary */
+.salary{background:var(--deep);color:var(--onDeep);padding:64px 0}
+.salary h2{color:var(--onDeep);max-width:16em}
+.salary .sub{color:#C5D6CA;max-width:36em}
+.pair{display:grid;gap:34px;margin-top:34px}
+.person h3{color:var(--onDeep);margin-bottom:2px}
+.person .role{color:#B7CBBE;font-size:.95rem;margin-bottom:12px}
+.stack{display:flex;height:46px;border-radius:8px;overflow:hidden;background:#173A2D}
+.seg{height:100%;width:0;transition:width 1.1s cubic-bezier(.2,.7,.2,1)}
+.seg.status{background:var(--brick)}
+.seg.needs{background:var(--needs)}
+.seg.build{background:#59C08C}
+.seg.left{background:var(--gold)}
+.legend{list-style:none;margin:14px 0 0;padding:0;font-size:.98rem}
+.legend li{display:flex;gap:10px;align-items:baseline;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.12)}
+.legend .chip{flex:none;width:12px;height:12px;border-radius:3px;transform:translateY(1px)}
+.legend .amt{margin-left:auto;font-family:var(--display);font-weight:700;white-space:nowrap}
+.outcome{margin-top:14px;font-size:1rem;color:#DCE8DF}
+.outcome strong{color:#fff}
+.fine{font-size:.85rem;color:#9FB6A8;margin-top:30px;max-width:44em}
+
+/* sections */
+section.s{padding:68px 0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:36em}
+.problem p{max-width:36em}
+
+/* inside */
+.parts{display:grid;gap:14px;margin-top:26px}
+details.part{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0}
+details.part summary{list-style:none;cursor:pointer;padding:18px 20px;display:flex;gap:14px;align-items:baseline}
+details.part summary::-webkit-details-marker{display:none}
+details.part summary::after{content:"+";margin-left:auto;font-family:var(--display);font-size:1.5rem;line-height:1;color:var(--green)}
+details.part[open] summary::after{content:"\2212"}
+.pn{font-family:var(--display);font-weight:800;color:var(--green);min-width:2.1em}
+.pt{font-family:var(--display);font-weight:700;font-size:1.08rem;line-height:1.25}
+.pb{padding:0 20px 18px 20px}
+.pb p{color:var(--muted);font-size:1rem;margin-bottom:.7em}
+.pb ol{margin:0;padding-left:1.4em;font-size:1rem}
+.pb li{padding:2px 0}
+
+/* peek */
+.peek{background:var(--mint)}
+.peek .grid{display:grid;gap:30px}
+.ledger{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px 20px 18px;box-shadow:0 14px 26px -18px rgba(0,0,0,.35)}
+.ledger h3{margin-bottom:4px}
+.ledger .cap{font-size:.9rem;color:var(--muted);margin-bottom:10px}
+.ledger table{width:100%;border-collapse:collapse;font-size:.98rem}
+.ledger th,.ledger td{text-align:left;padding:9px 6px;border-bottom:1px solid var(--line);vertical-align:top}
+.ledger td:nth-child(n+2),.ledger th:nth-child(n+2){text-align:right;white-space:nowrap}
+.ledger th{font-family:var(--display);font-size:.88rem;color:var(--muted);font-weight:500}
+.ledger tfoot td{font-family:var(--display);font-weight:800;border-bottom:0;border-top:2px solid var(--ink)}
+.gets{list-style:none;padding:0;margin:22px 0 0}
+.gets li{padding:11px 0 11px 30px;position:relative;border-bottom:1px solid color-mix(in srgb,var(--ink) 14%,transparent)}
+.gets li::before{content:"";position:absolute;left:3px;top:19px;width:13px;height:7px;border-left:3px solid var(--green);border-bottom:3px solid var(--green);transform:rotate(-45deg)}
+
+/* for whom */
+.who{display:grid;gap:22px;margin-top:20px}
+.who .col{border-top:3px solid var(--green);padding-top:14px}
+.who .col.no{border-top-color:var(--brick)}
+.who ul{margin:8px 0 0;padding-left:1.15em}
+.who li{padding:3px 0}
+
+/* author */
+.author{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.author .grid{display:grid;gap:18px}
+.author p{max-width:38em}
+.cred{font-family:var(--display);font-weight:500;color:var(--muted);font-size:1rem}
+
+/* buy */
+.buy{background:var(--deep);color:var(--onDeep);padding:72px 0}
+.buy h2{color:var(--onDeep)}
+.ticket{background:var(--paper);color:var(--ink);border-radius:16px;padding:26px 22px;display:grid;gap:22px;margin-top:26px}
+.pricebig{font-family:var(--display);font-weight:800;font-size:3.4rem;line-height:1;letter-spacing:-.03em}
+.ticket ul{list-style:none;margin:14px 0 0;padding:0;font-size:1rem}
+.ticket li{padding:6px 0;border-bottom:1px solid var(--line)}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-family:var(--display);font-weight:700;font-size:.92rem;margin-bottom:5px}
+.field input{width:100%;font:inherit;font-size:1.02rem;padding:13px 14px;border:2px solid var(--line);border-radius:10px;background:var(--card);color:var(--ink)}
+.field input:focus{border-color:var(--green)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 18px}
+.steps li{counter-increment:s;position:relative;padding:5px 0 5px 34px;font-size:1rem}
+.steps li::before{content:counter(s);position:absolute;left:0;top:5px;width:24px;height:24px;border-radius:50%;background:var(--green);color:#fff;font-family:var(--display);font-weight:700;font-size:.85rem;display:grid;place-items:center}
+.bank{display:none;background:var(--mint);border-radius:10px;padding:14px 16px;margin:0 0 16px;font-size:1rem}
+.bank.on{display:block}
+.bank b{font-family:var(--display)}
+.msg{font-size:.95rem;margin-top:12px;min-height:1.4em}
+.alt{margin-top:14px;font-size:.98rem;color:var(--muted)}
+
+/* faq */
+.faq details{border-bottom:1px solid var(--line);padding:4px 0}
+.faq summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:1.08rem;padding:14px 0;list-style:none;display:flex;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";margin-left:auto;color:var(--green);font-size:1.4rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{color:var(--muted);max-width:40em;padding-bottom:6px}
+
+/* footer */
+footer{padding:46px 0 60px;font-size:.95rem;color:var(--muted)}
+footer .contact{display:flex;flex-wrap:wrap;gap:8px 26px;margin-bottom:18px;font-family:var(--display);font-weight:500}
+footer .contact a{color:var(--ink)}
+footer .legal{font-size:.85rem;max-width:52em}
+
+@media (min-width:800px){
+  body{font-size:19px}
+  .hero{padding:72px 0 84px}
+  .hero .grid{grid-template-columns:1.35fr .65fr;align-items:center;gap:56px}
+  .pair{grid-template-columns:1fr 1fr;gap:56px}
+  .parts{grid-template-columns:1fr 1fr}
+  .peek .grid{grid-template-columns:1fr 1fr;align-items:center;gap:56px}
+  .who{grid-template-columns:1fr 1fr;gap:44px}
+  .author .grid{grid-template-columns:.4fr 1fr;gap:44px}
+  .ticket{grid-template-columns:.8fr 1.2fr;gap:44px;padding:36px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .seg{transition:none}
+}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">The Mimetic Trap</a>
+    <a class="btn btn-gold" href="#buy">Buy for ₦1,500</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap grid">
+    <div>
+      <h1>Your salary isn’t the problem. Your audience is.</h1>
+      <p class="lede">Many people earn well and still end the month with nothing: the car lease, the ceremony levy, the lifestyle that has to be seen. <i>The Mimetic Trap</i> shows you how the pressure to keep up drains your money, and gives you the budgeting and balance-sheet tools to stop it.</p>
+      <div class="cta">
+        <a class="btn btn-gold" href="#buy">Get the e-book for ₦1,500</a>
+        <a class="btn btn-ghost" href="#inside">See what’s inside</a>
+      </div>
+      <p class="price-note" style="margin-top:14px">46-page PDF. Read on any phone, tablet or computer.</p>
+    </div>
+    <div class="cover-wrap" aria-hidden="true">
+      <div class="cover">
+        <small>A scholarly treatise on behavioral accounting</small>
+        <div>
+          <b>The Mimetic Trap</b>
+          <i></i>
+          <em>How Peer Pressure Drives Financial Mismanagement and Wealth Erosion</em>
+        </div>
+        <span class="by">Inspr Adegor Favour Ese</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAME SALARY -->
+<section class="salary" id="example">
+  <div class="wrap">
+    <h2>Same ₦700,000 salary. Two very different months.</h2>
+    <p class="sub">This is the example from Chapter 2. Both men earn the same. One spends to be seen. The other spends to build.</p>
+
+    <div class="pair">
+      <div class="person">
+        <h3>Mr. Adegoke</h3>
+        <p class="role">Spends to impress</p>
+        <div class="stack" role="img" aria-label="Mr. Adegoke: 350,000 naira SUV lease, 300,000 naira upscale rent, 50,000 naira left over">
+          <div class="seg status" data-w="50"></div>
+          <div class="seg status" data-w="42.86" style="filter:brightness(.82)"></div>
+          <div class="seg left" data-w="7.14"></div>
+        </div>
+        <ul class="legend">
+          <li><span class="chip" style="background:var(--brick)"></span>Luxury SUV lease<span class="amt">₦350,000</span></li>
+          <li><span class="chip" style="background:var(--brick);filter:brightness(.82)"></span>Upscale apartment rent<span class="amt">₦300,000</span></li>
+          <li><span class="chip" style="background:var(--gold)"></span>Left over<span class="amt">₦50,000</span></li>
+        </ul>
+        <p class="outcome"><strong>After five years:</strong> a depreciating car, rising loan balances and no reserves. One shock away from trouble.</p>
+      </div>
+
+      <div class="person">
+        <h3>Mr. Emeka</h3>
+        <p class="role">Spends to build</p>
+        <div class="stack" role="img" aria-label="Mr. Emeka: 150,000 naira rent, 400,000 naira invested, 150,000 naira other living costs">
+          <div class="seg needs" data-w="21.43"></div>
+          <div class="seg build" data-w="57.14"></div>
+          <div class="seg needs" data-w="21.43" style="filter:brightness(.85)"></div>
+        </div>
+        <ul class="legend">
+          <li><span class="chip" style="background:var(--needs)"></span>Comfortable rent<span class="amt">₦150,000</span></li>
+          <li><span class="chip" style="background:#59C08C"></span>Invested in treasury bills and agribusiness<span class="amt">₦400,000</span></li>
+          <li><span class="chip" style="background:var(--needs);filter:brightness(.85)"></span>Food, transport, everything else<span class="amt">₦150,000</span></li>
+        </ul>
+        <p class="outcome"><strong>After five years:</strong> a growing asset base that produces income, and a cushion when life gets expensive.</p>
+      </div>
+    </div>
+    <p class="fine">Illustrative example from the book. Real outcomes depend on returns, health and circumstances; investments carry risk and returns are not guaranteed.</p>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="s problem">
+  <div class="wrap">
+    <h2>It was never about the math.</h2>
+    <p class="lead">After more than seventeen years in Nigerian public service, the author kept seeing the same thing: well-paid people ending their careers under unserviced debt.</p>
+    <p>The cause is rarely that they can’t add up. We borrow our wants from the people around us, a habit the philosopher René Girard called mimetic desire. Then credit and social media make keeping up easy to finance and hard to stop.</p>
+    <p>The result: a balance sheet full of things that lose value, and none of the things that pay you. This book gives that pattern a name, then gives you the accounting tools to break it.</p>
+  </div>
+</section>
+
+<!-- INSIDE -->
+<section class="s" id="inside" style="padding-top:0">
+  <div class="wrap">
+    <h2>What’s inside: 12 chapters in 4 parts</h2>
+    <p class="lead">Tap a part to see its chapters. Every chapter ends with a short summary, and the practical ones include worked examples in naira.</p>
+    <div class="parts">
+      <details class="part" open>
+        <summary><span class="pn">I</span><span class="pt">The psychology of wealth and social conformity</span></summary>
+        <div class="pb">
+          <p>Why your brain treats saying “no” to the crowd like a threat, and how Veblen and Girard explain it.</p>
+          <ol>
+            <li>The anatomy of social influence</li>
+            <li>Conspicuous consumption and the illusion of success</li>
+            <li>The psychological toll of financial mismanagement</li>
+          </ol>
+        </div>
+      </details>
+      <details class="part">
+        <summary><span class="pn">II</span><span class="pt">The architecture of adequate financial management</span></summary>
+        <div class="pb">
+          <p>Budgeting, balance sheets and borrowing, explained the way an accountant would use them.</p>
+          <ol start="4">
+            <li>The financial blueprint: cash flow and budgetary discipline</li>
+            <li>Decoding assets versus liabilities</li>
+            <li>The anatomy of debt: good versus bad leverage</li>
+          </ol>
+        </div>
+      </details>
+      <details class="part">
+        <summary><span class="pn">III</span><span class="pt">Individual and household transformation</span></summary>
+        <div class="pb">
+          <p>Turning the money you stop wasting into assets, and protecting what you build for your family.</p>
+          <ol start="7">
+            <li>Systematic asset accumulation over liability consumption</li>
+            <li>Breaking generational cycles and securing legacy</li>
+          </ol>
+        </div>
+      </details>
+      <details class="part">
+        <summary><span class="pn">IV</span><span class="pt">Society, state and the universe at large</span></summary>
+        <div class="pb">
+          <p>How millions of private spending choices shape inequality, savings, the exchange rate and the environment.</p>
+          <ol start="9">
+            <li>The societal ripple effect: inequality and social friction</li>
+            <li>National economic resilience: savings, productivity and the state</li>
+            <li>Global consumerism, climate and sustainability</li>
+            <li>The roadmap to financial sovereignty, with a 30-day starter plan</li>
+          </ol>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- PEEK -->
+<section class="s peek">
+  <div class="wrap grid">
+    <div>
+      <h2>Tools you can use this month</h2>
+      <p class="lead" style="color:var(--ink);opacity:.8">Here is a page from Chapter 4: a zero-based budget where every naira has a job before the month begins.</p>
+      <ul class="gets">
+        <li>Run an outflow audit that finds your “status leaks”</li>
+        <li>Build a zero-based budget for your own salary</li>
+        <li>Draw up your real balance sheet and net worth</li>
+        <li>Test any loan: is it good leverage or consumer servitude?</li>
+        <li>Follow the 30-day plan to put it all into practice</li>
+      </ul>
+    </div>
+    <div class="ledger">
+      <h3>A ₦700,000 monthly budget</h3>
+      <p class="cap">Illustrative split from Chapter 4</p>
+      <table>
+        <thead><tr><th>Category</th><th>Amount</th><th>Share</th></tr></thead>
+        <tbody>
+          <tr><td>Fixed needs</td><td>₦300,000</td><td>43%</td></tr>
+          <tr><td>Debt service</td><td>₦0</td><td>0%</td></tr>
+          <tr><td>Emergency fund</td><td>₦50,000</td><td>7%</td></tr>
+          <tr><td>Asset allocation</td><td>₦250,000</td><td>36%</td></tr>
+          <tr><td>Social and discretionary (capped)</td><td>₦100,000</td><td>14%</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total allocated</td><td>₦700,000</td><td>100%</td></tr></tfoot>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="s">
+  <div class="wrap">
+    <h2>Is this book for you?</h2>
+    <div class="who">
+      <div class="col">
+        <h3>It’s for you if you are</h3>
+        <ul>
+          <li>A salaried professional or public servant whose pay disappears by mid-month</li>
+          <li>A small business owner mixing personal and business money</li>
+          <li>Under pressure to fund weddings, levies or a lifestyle you can’t afford</li>
+          <li>A student of accounting, finance or behavioral economics</li>
+        </ul>
+      </div>
+      <div class="col no">
+        <h3>It’s not</h3>
+        <ul>
+          <li>A get-rich-quick scheme. It teaches habits and arithmetic, not shortcuts.</li>
+          <li>Personal investment, tax or legal advice. Investments carry risk, so speak to a licensed adviser before you invest.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="s author">
+  <div class="wrap grid">
+    <div>
+      <h2 style="margin-bottom:.2em">About the author</h2>
+      <p class="cred">B.Sc, M.Sc, ACA (in view)</p>
+    </div>
+    <div>
+      <p><strong>Inspr Adegor Favour Ese, B.Sc, M.Sc, ACA (in view)</strong> has served in Nigerian public service for over seventeen years while studying financial management. He wrote <i>The Mimetic Trap</i> to bring accounting discipline and behavioral psychology together for ordinary households and for students and researchers of behavioral accounting.</p>
+      <p>He is based in Yenagoa, Bayelsa State, Nigeria. Questions about the book? Message him directly on WhatsApp or email.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BUY -->
+<section class="buy" id="buy">
+  <div class="wrap">
+    <h2>Get your copy of The Mimetic Trap</h2>
+    <div class="ticket">
+      <div>
+        <div class="pricebig">₦1,500</div>
+        <ul>
+          <li>Complete 46-page PDF e-book, revised edition</li>
+          <li>12 chapters with worked examples in naira</li>
+          <li>30-day starter plan and references</li>
+          <li>Sent to your email or WhatsApp once your payment is confirmed</li>
+        </ul>
+      </div>
+      <div>
+        <ol class="steps">
+          <li>Enter your name and email below.</li>
+          <li>Press the button to message the author on WhatsApp.</li>
+          <li>Transfer ₦1,500 to the account shown, send your proof of payment, and receive your PDF.</li>
+        </ol>
+
+        <div class="bank" id="bank"></div>
+
+        <div id="orderform">
+          <label class="field"><span>Your name</span><input id="oname" type="text" autocomplete="name" placeholder="e.g. Chinedu Okafor"></label>
+          <label class="field"><span>Your email</span><input id="oemail" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com"></label>
+          <button class="btn btn-gold" id="orderbtn" type="button" style="width:100%">Order on WhatsApp</button>
+          <p class="msg" id="msg" role="status" aria-live="polite"></p>
+        </div>
+
+        <a class="btn btn-gold" id="paylink" href="#" style="display:none;width:100%;text-align:center;margin-bottom:12px" target="_blank" rel="noopener">Pay ₦1,500 now</a>
+
+        <p class="alt">Prefer email? Write to <a href="mailto:esefavour@gmail.com?subject=Order%3A%20The%20Mimetic%20Trap">esefavour@gmail.com</a> or call <a href="tel:+2348065517929">0806 551 7929</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="s faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <details>
+      <summary>How will I receive the book?</summary>
+      <p>As a PDF, sent to the email address or WhatsApp number you give once your payment is confirmed.</p>
+    </details>
+    <details>
+      <summary>How do I pay?</summary>
+      <p>Transfer ₦1,500 to the GTBank account shown in the buy section (account name: Adegor Ese). Then press “Order on WhatsApp” and send your proof of payment, or email it to esefavour@gmail.com.</p>
+    </details>
+    <details>
+      <summary>Can I read it on my phone?</summary>
+      <p>Yes. The PDF is sized to read comfortably on a phone screen, and it also works on tablets and computers. Chapter names are bookmarked, so you can jump around.</p>
+    </details>
+    <details>
+      <summary>Is this investment advice?</summary>
+      <p>No. The book teaches budgeting, balance-sheet and borrowing principles using illustrative examples. All investments carry risk, including loss of capital, and returns are not guaranteed. Speak to a licensed financial adviser before investing.</p>
+    </details>
+    <details>
+      <summary>Is it only for Nigerians?</summary>
+      <p>The examples use naira and Nigerian social settings such as ceremonies and levies, but the psychology and the accounting tools apply anywhere.</p>
+    </details>
+    <details>
+      <summary>I paid but did not get my file. What now?</summary>
+      <p>Message or call 0806 551 7929, or email esefavour@gmail.com with your name and proof of payment.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contact">
+      <a href="https://wa.me/2348065517929" target="_blank" rel="noopener">WhatsApp 0806 551 7929</a>
+      <a href="tel:+2348065517929">Call 0806 551 7929</a>
+      <a href="mailto:esefavour@gmail.com">esefavour@gmail.com</a>
+    </div>
+    <p class="legal">The Mimetic Trap: How Peer Pressure Drives Financial Mismanagement and Wealth Erosion, by Inspr Adegor Favour Ese, B.Sc, M.Sc, ACA (in view). Academic Legacy Press, Yenagoa, Bayelsa State, Nigeria, 2026. This book is for education and general information and is not personalized financial, investment, tax or legal advice. Examples are illustrative.</p>
+  </div>
+</footer>
+
+<script>
+/* ---- SETTINGS: the author can change these ---- */
+var CONFIG = {
+  whatsapp: "2348065517929",
+  // If you create a payment link (Paystack, Flutterwave, Selar), paste it here to show a "Pay now" button.
+  paymentLink: "",
+  // Fill these in to show your bank transfer details on the page.
+  bank: { bankName: "GTBank", accountName: "Adegor Ese", accountNumber: "0005116613" }
+};
+
+(function () {
+  /* bars: animate once on load */
+  var segs = document.querySelectorAll(".seg");
+  function grow() { for (var i = 0; i < segs.length; i++) segs[i].style.width = segs[i].getAttribute("data-w") + "%"; }
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || !("IntersectionObserver" in window)) { grow(); }
+  else {
+    var io = new IntersectionObserver(function (e) {
+      if (e[0].isIntersecting) { grow(); io.disconnect(); }
+    }, { threshold: 0.25 });
+    io.observe(document.getElementById("example"));
+  }
+
+  /* payment options */
+  var link = document.getElementById("paylink");
+  if (CONFIG.paymentLink) { link.href = CONFIG.paymentLink; link.style.display = "block"; }
+  var b = CONFIG.bank;
+  if (b.bankName && b.accountNumber) {
+    var box = document.getElementById("bank");
+    box.innerHTML = "<b>Pay by bank transfer</b><br>Bank: " + esc(b.bankName) + "<br>Account name: " + esc(b.accountName) + "<br>Account number: " + esc(b.accountNumber) + "<br>Amount: ₦1,500";
+    box.className = "bank on";
+  }
+  function esc(s) { var d = document.createElement("div"); d.textContent = s; return d.innerHTML; }
+
+  /* WhatsApp order */
+  var btn = document.getElementById("orderbtn");
+  var msg = document.getElementById("msg");
+  btn.addEventListener("click", function () {
+    var name = document.getElementById("oname").value.trim();
+    var email = document.getElementById("oemail").value.trim();
+    if (!name) { msg.textContent = "Enter your name so the author knows who to send the book to."; document.getElementById("oname").focus(); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { msg.textContent = "Enter a valid email address, for example you@example.com."; document.getElementById("oemail").focus(); return; }
+    var text = "Hello, I would like to buy the e-book The Mimetic Trap (₦1,500).\nName: " + name + "\nEmail: " + email + "\nPlease send me the payment details.";
+    msg.textContent = "Opening WhatsApp with your order message. Press send there to complete your order.";
+    window.open("https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(text), "_blank", "noopener");
+  });
+})();
+</script>
+</body>
+</html>
